@@ -1,0 +1,851 @@
+DEBUG: Using RE2 regex engine
+DEBUG: Parsing configs
+DEBUG: Checking for config file in /builds/gitlab-group/renovate/renovate-bot/config.js
+DEBUG: Enabling debug logging to renovate-log.ndjson
+DEBUG: File config
+       "config": {
+         "onboarding": true,
+         "onboardingConfig": {
+           "extends": ["local>gitlab-group/renovate/renovate-bot"]
+         },
+         "repositories": ["gitlab-group/test_project/base_images"]
+       }
+DEBUG: CLI config
+       "config": {}
+DEBUG: Env config
+       "config": {
+         "hostRules": [],
+         "logFile": "renovate-log.ndjson",
+         "logFileLevel": "debug",
+         "platform": "gitlab",
+         "endpoint": "https://gitlab.company.com/api/v4",
+         "token": "***********"
+       }
+DEBUG: Combined config
+       "config": {
+         "onboarding": true,
+         "onboardingConfig": {
+           "extends": ["local>gitlab-group/renovate/renovate-bot"]
+         },
+         "repositories": ["gitlab-group/test_project/base_images"],
+         "hostRules": [],
+         "logFile": "renovate-log.ndjson",
+         "logFileLevel": "debug",
+         "platform": "gitlab",
+         "endpoint": "https://gitlab.company.com/api/v4",
+         "token": "***********"
+       }
+DEBUG: Adding trailing slash to endpoint
+DEBUG: Enabling forkProcessing while in non-autodiscover mode
+DEBUG: Found valid git version: 2.43.0
+DEBUG: Setting global hostRules
+DEBUG: hostRules: authentication already set for gitlab.company.com
+DEBUG: GitLab version is: 15.6.8-ee
+DEBUG: Using platform gitAuthor: group-token <group25687_bot@noreply.gitlab.company.com>
+DEBUG: Adding token authentication for gitlab.company.com (hostType=gitlab) to hostRules
+DEBUG: Using baseDir: /tmp/renovate
+DEBUG: Using cacheDir: /tmp/renovate/cache
+DEBUG: Using containerbaseDir: /tmp/renovate/cache/containerbase
+DEBUG: Initializing Renovate internal cache into /tmp/renovate/cache/renovate/renovate-cache-v1
+DEBUG: Commits limit = null
+DEBUG: Setting global hostRules
+DEBUG: Adding token authentication for gitlab.company.com (hostType=gitlab) to hostRules
+DEBUG: validatePresets()
+DEBUG: Reinitializing hostRules for repo
+DEBUG: Clearing hostRules
+DEBUG: Adding token authentication for gitlab.company.com (hostType=gitlab) to hostRules
+ INFO: Repository started (repository=gitlab-group/test_project/base_images)
+       "renovateVersion": "37.180.1"
+DEBUG: Using localDir: /tmp/renovate/repos/gitlab/gitlab-group/test_project/base_images (repository=gitlab-group/test_project/base_images)
+DEBUG: PackageFiles.clear() - Package files deleted (repository=gitlab-group/test_project/base_images)
+DEBUG: hostRules: applying Bearer authentication for gitlab.company.com (repository=gitlab-group/test_project/base_images)
+DEBUG: gitlab-group/test_project/base_images default branch = main (repository=gitlab-group/test_project/base_images)
+DEBUG: Enabling Git FS (repository=gitlab-group/test_project/base_images)
+DEBUG: Using http URL: https://gitlab.company.com/gitlab-group/test_project/base_images.git (repository=gitlab-group/test_project/base_images)
+DEBUG: Resetting npmrc (repository=gitlab-group/test_project/base_images)
+DEBUG: Resetting npmrc (repository=gitlab-group/test_project/base_images)
+DEBUG: checkOnboarding() (repository=gitlab-group/test_project/base_images)
+DEBUG: isOnboarded() (repository=gitlab-group/test_project/base_images)
+DEBUG: findPr(renovate/configure, Configure Renovate, !open) (repository=gitlab-group/test_project/base_images)
+DEBUG: findFile(renovate.json) (repository=gitlab-group/test_project/base_images)
+DEBUG: Initializing git repository into /tmp/renovate/repos/gitlab/gitlab-group/test_project/base_images (repository=gitlab-group/test_project/base_images)
+DEBUG: Performing blobless clone (repository=gitlab-group/test_project/base_images)
+DEBUG: git clone completed (repository=gitlab-group/test_project/base_images)
+       "durationMs": 2014
+DEBUG: latest repository commit (repository=gitlab-group/test_project/base_images)
+       "latestCommit": {
+         "hash": "e9533ff4afc349dfb7e475a95f0a2af359d3bd6d",
+         "date": "2024-02-29T12:22:21-05:00",
+         "message": "Update base_images.txt",
+         "refs": "HEAD -> main, origin/main, origin/HEAD",
+         "body": "",
+         "author_name": " LastName, FisrtName",
+         "author_email": " FisrtName.LastName@company.com"
+       }
+DEBUG: Config file exists, fileName: renovate.json (repository=gitlab-group/test_project/base_images)
+DEBUG: ensureIssueClosing() (repository=gitlab-group/test_project/base_images)
+DEBUG: Repo is onboarded (repository=gitlab-group/test_project/base_images)
+DEBUG: Found renovate.json config file (repository=gitlab-group/test_project/base_images)
+DEBUG: Repository config (repository=gitlab-group/test_project/base_images)
+       "fileName": "renovate.json",
+       "config": {
+         "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+         "extends": ["local>gitlab-group/renovate/renovate-bot"]
+       }
+DEBUG: migrateAndValidate() (repository=gitlab-group/test_project/base_images)
+DEBUG: No config migration necessary (repository=gitlab-group/test_project/base_images)
+DEBUG: Found repo ignorePaths (repository=gitlab-group/test_project/base_images)
+       "ignorePaths": ["**/node_modules/**", "**/bower_components/**"]
+DEBUG: No vulnerability alerts found (repository=gitlab-group/test_project/base_images)
+DEBUG: No baseBranches (repository=gitlab-group/test_project/base_images)
+DEBUG: extract() (repository=gitlab-group/test_project/base_images)
+DEBUG: Setting current branch to main (repository=gitlab-group/test_project/base_images)
+DEBUG: latest commit (repository=gitlab-group/test_project/base_images)
+       "branchName": "main",
+       "latestCommitDate": "2024-02-29T12:22:21-05:00"
+DEBUG: Using file match: (^|/)tasks/[^/]+\.ya?ml$ for manager ansible (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)(galaxy|requirements)(\.ansible)?\.ya?ml$ for manager ansible-galaxy (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)\.tool-versions$ for manager asdf (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: azure.*pipelines?.*\.ya?ml$ for manager azure-pipelines (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)batect(-bundle)?\.ya?ml$ for manager batect (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)batect$ for manager batect-wrapper (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)WORKSPACE(|\.bazel)$ for manager bazel (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: \.bzl$ for manager bazel (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)MODULE\.bazel$ for manager bazel-module (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)\.bazelversion$ for manager bazelisk (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: \.bicep$ for manager bicep (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)\.?bitbucket-pipelines\.ya?ml$ for manager bitbucket-pipelines (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: buildkite\.ya?ml for manager buildkite (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: \.buildkite/.+\.ya?ml$ for manager buildkite (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)bun\.lockb$ for manager bun (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)Gemfile$ for manager bundler (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: \.cake$ for manager cake (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)Cargo\.toml$ for manager cargo (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)\.circleci/config\.ya?ml$ for manager circleci (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)cloudbuild\.ya?ml for manager cloudbuild (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)Podfile$ for manager cocoapods (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)([\w-]*)composer\.json$ for manager composer (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)conanfile\.(txt|py)$ for manager conan (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)cpanfile$ for manager cpanfile (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)(?:deps|bb)\.edn$ for manager deps-edn (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)(?:docker-)?compose[^/]*\.ya?ml$ for manager docker-compose (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/|\.)([Dd]ocker|[Cc]ontainer)file$ for manager dockerfile (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)([Dd]ocker|[Cc]ontainer)file[^/]*$ for manager dockerfile (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)\.drone\.yml$ for manager droneci (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)fleet\.ya?ml for manager fleet (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (?:^|/)gotk-components\.ya?ml$ for manager flux (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)\.fvm/fvm_config\.json$ for manager fvm (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)\.gitmodules$ for manager git-submodules (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)(workflow-templates|\.(?:github|gitea|forgejo)/(?:workflows|actions))/.+\.ya?ml$ for manager github-actions (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)action\.ya?ml$ for manager github-actions (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: \.gitlab-ci\.ya?ml$ for manager gitlabci (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: \.gitlab-ci\.ya?ml$ for manager gitlabci-include (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)go\.mod$ for manager gomod (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: \.gradle(\.kts)?$ for manager gradle (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)gradle\.properties$ for manager gradle (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)gradle/.+\.toml$ for manager gradle (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)buildSrc/.+\.kt$ for manager gradle (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: \.versions\.toml$ for manager gradle (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)versions.props$ for manager gradle (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)versions.lock$ for manager gradle (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)gradle/wrapper/gradle-wrapper\.properties$ for manager gradle-wrapper (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)requirements\.ya?ml$ for manager helm-requirements (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)values\.ya?ml$ for manager helm-values (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)helmfile\.ya?ml(?:\.gotmpl)?$ for manager helmfile (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)Chart\.ya?ml$ for manager helmv3 (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)bin/hermit$ for manager hermit (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: ^Formula/[^/]+[.]rb$ for manager homebrew (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: \.html?$ for manager html (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)plugins\.(txt|ya?ml)$ for manager jenkins (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)jsonnetfile\.json$ for manager jsonnet-bundler (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: ^.+\.main\.kts$ for manager kotlin-script (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)kustomization\.ya?ml$ for manager kustomize (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)project\.clj$ for manager leiningen (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/|\.)pom\.xml$ for manager maven (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: ^(((\.mvn)|(\.m2))/)?settings\.xml$ for manager maven (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|\/).mvn/wrapper/maven-wrapper.properties$ for manager maven-wrapper (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)package\.js$ for manager meteor (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)Mintfile$ for manager mint (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)mix\.exs$ for manager mix (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)flake\.nix$ for manager nix (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)\.node-version$ for manager nodenv (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)package\.json$ for manager npm (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: \.(?:cs|fs|vb)proj$ for manager nuget (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: \.(?:props|targets)$ for manager nuget (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)dotnet-tools\.json$ for manager nuget (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)global\.json$ for manager nuget (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)\.nvmrc$ for manager nvm (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)src/main/features/.+\.json$ for manager osgi (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)pyproject\.toml$ for manager pep621 (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)[\w-]*requirements(-\w+)?\.(txt|pip)$ for manager pip_requirements (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)setup\.py$ for manager pip_setup (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)Pipfile$ for manager pipenv (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)pyproject\.toml$ for manager poetry (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)\.pre-commit-config\.ya?ml$ for manager pre-commit (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)pubspec\.ya?ml$ for manager pub (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)Puppetfile$ for manager puppet (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)\.python-version$ for manager pyenv (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)\.ruby-version$ for manager ruby-version (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: \.sbt$ for manager sbt (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: project/[^/]*\.scala$ for manager sbt (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: project/build\.properties$ for manager sbt (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)setup\.cfg$ for manager setup-cfg (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)Package\.swift for manager swift (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: \.tf$ for manager terraform (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)\.terraform-version$ for manager terraform-version (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)terragrunt\.hcl$ for manager terragrunt (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)\.terragrunt-version$ for manager terragrunt-version (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: \.tflint\.hcl$ for manager tflint-plugin (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: ^\.travis\.ya?ml$ for manager travis (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: (^|/)\.vela\.ya?ml$ for manager velaci (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: ^\.woodpecker(?:/[^/]+)?\.ya?ml$ for manager woodpecker (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: variables.y[a]?ml$ for manager regex (repository=gitlab-group/test_project/base_images)
+DEBUG: Using file match: base_images.txt for manager regex (repository=gitlab-group/test_project/base_images)
+DEBUG: Matched 1 file(s) for manager gitlabci: .gitlab-ci.yml (repository=gitlab-group/test_project/base_images)
+DEBUG: Matched 1 file(s) for manager gitlabci-include: .gitlab-ci.yml (repository=gitlab-group/test_project/base_images)
+DEBUG: Matched 2 file(s) for manager regex: files/base_images.txt, vars/variables.yml (repository=gitlab-group/test_project/base_images)
+DEBUG: manager extract durations (ms) (repository=gitlab-group/test_project/base_images)
+       "managers": {"gitlabci": 8, "gitlabci-include": 8, "regex": 34}
+DEBUG: Found gitlabci package files (repository=gitlab-group/test_project/base_images)
+DEBUG: Found regex package files (repository=gitlab-group/test_project/base_images)
+DEBUG: Found 2 package file(s) (repository=gitlab-group/test_project/base_images)
+ INFO: Dependency extraction complete (repository=gitlab-group/test_project/base_images, baseBranch=main)
+       "stats": {
+         "managers": {
+           "gitlabci": {"fileCount": 1, "depCount": 1},
+           "regex": {"fileCount": 1, "depCount": 6}
+         },
+         "total": {"fileCount": 2, "depCount": 7}
+       }
+DEBUG: getLabels(https://registry-access-redhat-com.artifactory.company.com, ubi8/nodejs-20, latest) (repository=gitlab-group/test_project/base_images)
+DEBUG: getManifestResponse(https://registry-access-redhat-com.artifactory.company.com, ubi8/nodejs-20, latest, get) (repository=gitlab-group/test_project/base_images)
+DEBUG: getManifestResponse(https://registry-access-redhat-com.artifactory.company.com, ubi8/nodejs-20, sha256:c64033f97e838574627dc3bc974ae94d21445281f94be68348762f543629e3b5, get) (repository=gitlab-group/test_project/base_images)
+DEBUG: found labels in manifest (repository=gitlab-group/test_project/base_images)
+       "labels": {
+         "architecture": "x86_64",
+         "build-date": "2024-02-13T17:11:39",
+         "com.redhat.component": "nodejs-20-container",
+         "com.redhat.deployments-dir": "/opt/app-root/src",
+         "com.redhat.dev-mode": "DEV_MODE:false",
+         "com.redhat.dev-mode.port": "DEBUG_PORT:5858",
+         "com.redhat.license_terms": "https://www.redhat.com/en/about/red-hat-end-user-license-agreements#UBI",
+         "description": "Node.js 20 available as container is a base platform for building and running various Node.js 20 applications and frameworks. Node.js is a platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.",
+         "distribution-scope": "public",
+         "help": "For more information visit https://github.com/sclorg/s2i-nodejs-container",
+         "io.buildah.version": "1.29.0",
+         "io.buildpacks.stack.id": "com.redhat.stacks.ubi8-nodejs-20",
+         "io.k8s.description": "Node.js 20 available as container is a base platform for building and running various Node.js 20 applications and frameworks. Node.js is a platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.",
+         "io.k8s.display-name": "Node.js 20",
+         "io.openshift.expose-services": "8080:http",
+         "io.openshift.s2i.scripts-url": "image:///usr/libexec/s2i",
+         "io.openshift.tags": "builder,nodejs,nodejs20",
+         "io.s2i.scripts-url": "image:///usr/libexec/s2i",
+         "maintainer": "SoftwareCollections.org <sclorg@redhat.com>",
+         "name": "ubi8/nodejs-20",
+         "release": "30",
+         "summary": "Platform for building and running Node.js 20 applications",
+         "url": "https://access.redhat.com/containers/#/registry.access.redhat.com/ubi8/nodejs-20/images/1-30",
+         "usage": "s2i build <SOURCE-REPOSITORY> ubi8/nodejs-20:latest <APP-NAME>",
+         "vcs-ref": "5a88e319e30b542edcbcb39e1c4580d1fa4298b8",
+         "vcs-type": "git",
+         "vendor": "Red Hat, Inc.",
+         "version": "1"
+       }
+DEBUG: getLabels(https://registry-access-redhat-com.artifactory.company.com, ubi8/ubi-minimal, 8.6-751) (repository=gitlab-group/test_project/base_images)
+DEBUG: getManifestResponse(https://registry-access-redhat-com.artifactory.company.com, ubi8/ubi-minimal, 8.6-751, get) (repository=gitlab-group/test_project/base_images)
+DEBUG: getManifestResponse(https://registry-access-redhat-com.artifactory.company.com, ubi8/ubi-minimal, sha256:9a81cce19ae2a962269d4a7fecd38aec60b852118ad798a265c3f6c4be0df610, get) (repository=gitlab-group/test_project/base_images)
+DEBUG: found labels in manifest (repository=gitlab-group/test_project/base_images)
+       "labels": {
+         "architecture": "x86_64",
+         "build-date": "2022-05-03T08:57:48.980004",
+         "com.redhat.build-host": "cpt-1007.osbs.prod.upshift.rdu2.redhat.com",
+         "com.redhat.component": "ubi8-minimal-container",
+         "com.redhat.license_terms": "https://www.redhat.com/en/about/red-hat-end-user-license-agreements#UBI",
+         "description": "The Universal Base Image Minimal is a stripped down image that uses microdnf as a package manager. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly.",
+         "distribution-scope": "public",
+         "io.k8s.description": "The Universal Base Image Minimal is a stripped down image that uses microdnf as a package manager. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly.",
+         "io.k8s.display-name": "Red Hat Universal Base Image 8 Minimal",
+         "io.openshift.expose-services": "",
+         "io.openshift.tags": "minimal rhel8",
+         "maintainer": "Red Hat, Inc.",
+         "name": "ubi8-minimal",
+         "release": "751",
+         "summary": "Provides the latest release of the minimal Red Hat Universal Base Image 8.",
+         "url": "https://access.redhat.com/containers/#/registry.access.redhat.com/ubi8-minimal/images/8.6-751",
+         "vcs-ref": "50293e4ba66ca2194d8ee5a149a665cb9a375c71",
+         "vcs-type": "git",
+         "vendor": "Red Hat, Inc.",
+         "version": "8.6"
+       }
+DEBUG: Found no satisfying versions with 'redhat' versioning (repository=gitlab-group/test_project/base_images)
+DEBUG: getLabels(https://registry-access-redhat-com.artifactory.company.com, ubi8/nodejs-18, latest) (repository=gitlab-group/test_project/base_images)
+DEBUG: getManifestResponse(https://registry-access-redhat-com.artifactory.company.com, ubi8/nodejs-18, latest, get) (repository=gitlab-group/test_project/base_images)
+DEBUG: getManifestResponse(https://registry-access-redhat-com.artifactory.company.com, ubi8/nodejs-18, sha256:51cabe64da7ecfe05e47a8f312c756848dc6250c40df3710605d540c350ed48d, get) (repository=gitlab-group/test_project/base_images)
+DEBUG: found labels in manifest (repository=gitlab-group/test_project/base_images)
+       "labels": {
+         "architecture": "x86_64",
+         "build-date": "2024-02-13T17:11:37",
+         "com.redhat.component": "nodejs-18-container",
+         "com.redhat.deployments-dir": "/opt/app-root/src",
+         "com.redhat.dev-mode": "DEV_MODE:false",
+         "com.redhat.dev-mode.port": "DEBUG_PORT:5858",
+         "com.redhat.license_terms": "https://www.redhat.com/en/about/red-hat-end-user-license-agreements#UBI",
+         "description": "Node.js 18 available as container is a base platform for building and running various Node.js 18 applications and frameworks. Node.js is a platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.",
+         "distribution-scope": "public",
+         "help": "For more information visit https://github.com/sclorg/s2i-nodejs-container",
+         "io.buildah.version": "1.29.0",
+         "io.buildpacks.stack.id": "com.redhat.stacks.ubi8-nodejs-18",
+         "io.k8s.description": "Node.js 18 available as container is a base platform for building and running various Node.js 18 applications and frameworks. Node.js is a platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.",
+         "io.k8s.display-name": "Node.js 18",
+         "io.openshift.expose-services": "8080:http",
+         "io.openshift.s2i.scripts-url": "image:///usr/libexec/s2i",
+         "io.openshift.tags": "builder,nodejs,nodejs18",
+         "io.s2i.scripts-url": "image:///usr/libexec/s2i",
+         "maintainer": "SoftwareCollections.org <sclorg@redhat.com>",
+         "name": "ubi8/nodejs-18",
+         "release": "94",
+         "summary": "Platform for building and running Node.js 18 applications",
+         "url": "https://access.redhat.com/containers/#/registry.access.redhat.com/ubi8/nodejs-18/images/1-94",
+         "usage": "s2i build <SOURCE-REPOSITORY> ubi8/nodejs-18:latest <APP-NAME>",
+         "vcs-ref": "19ce4dc8f10baa91c18ee7170d47c5475ca525e3",
+         "vcs-type": "git",
+         "vendor": "Red Hat, Inc.",
+         "version": "1"
+       }
+DEBUG: getLabels(https://registry-redhat-io.artifactory.company.com, rhel8/redis-6, 1-10) (repository=gitlab-group/test_project/base_images)
+DEBUG: getManifestResponse(https://registry-redhat-io.artifactory.company.com, rhel8/redis-6, 1-10, get) (repository=gitlab-group/test_project/base_images)
+DEBUG: getManifestResponse(https://registry-redhat-io.artifactory.company.com, rhel8/redis-6, sha256:9b59a32c1a606d920e1bd7baa76558841cd9875d40af01b45a3fff0f9348f23f, get) (repository=gitlab-group/test_project/base_images)
+DEBUG: found labels in manifest (repository=gitlab-group/test_project/base_images)
+       "labels": {
+         "architecture": "x86_64",
+         "build-date": "2021-06-23T07:40:02.589741",
+         "com.redhat.build-host": "cpt-1002.osbs.prod.upshift.rdu2.redhat.com",
+         "com.redhat.component": "redis-6-container",
+         "com.redhat.license_terms": "https://www.redhat.com/en/about/red-hat-end-user-license-agreements#rhel",
+         "description": "Redis 6 available as container, is an advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets. You can run atomic operations on these types, like appending to a string; incrementing the value in a hash; pushing to a list; computing set intersection, union and difference; or getting the member with highest ranking in a sorted set. In order to achieve its outstanding performance, Redis works with an in-memory dataset. Depending on your use case, you can persist it either by dumping the dataset to disk every once in a while, or by appending each command to a log.",
+         "distribution-scope": "public",
+         "io.k8s.description": "Redis 6 available as container, is an advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets. You can run atomic operations on these types, like appending to a string; incrementing the value in a hash; pushing to a list; computing set intersection, union and difference; or getting the member with highest ranking in a sorted set. In order to achieve its outstanding performance, Redis works with an in-memory dataset. Depending on your use case, you can persist it either by dumping the dataset to disk every once in a while, or by appending each command to a log.",
+         "io.k8s.display-name": "Redis 6",
+         "io.openshift.expose-services": "6379:redis",
+         "io.openshift.s2i.scripts-url": "image:///usr/libexec/s2i",
+         "io.openshift.tags": "database,redis,redis6,redis-6",
+         "io.s2i.scripts-url": "image:///usr/libexec/s2i",
+         "maintainer": "SoftwareCollections.org <sclorg@redhat.com>",
+         "name": "rhel8/redis-6",
+         "release": "10",
+         "summary": "Redis in-memory data structure store, used as database, cache and message broker",
+         "url": "https://access.redhat.com/containers/#/registry.access.redhat.com/rhel8/redis-6/images/1-10",
+         "usage": "podman run -d --name redis_database -p 6379:6379 rhel8/redis-6",
+         "vcs-ref": "4ba21ceb4112881162af54a9d4521f3d4279014c",
+         "vcs-type": "git",
+         "vendor": "Red Hat, Inc.",
+         "version": "1"
+       }
+DEBUG: Found no satisfying versions with 'redhat' versioning (repository=gitlab-group/test_project/base_images)
+DEBUG: Found no satisfying versions with 'redhat' versioning (repository=gitlab-group/test_project/base_images)
+DEBUG: Found no satisfying versions with 'redhat' versioning (repository=gitlab-group/test_project/base_images)
+DEBUG: PackageFiles.add() - Package file saved for base branch (repository=gitlab-group/test_project/base_images, baseBranch=main)
+DEBUG: Package releases lookups complete (repository=gitlab-group/test_project/base_images, baseBranch=main)
+DEBUG: branchifyUpgrades (repository=gitlab-group/test_project/base_images)
+DEBUG: detectSemanticCommits() (repository=gitlab-group/test_project/base_images)
+DEBUG: getCommitMessages (repository=gitlab-group/test_project/base_images)
+DEBUG: semanticCommits: detected "unknown" (repository=gitlab-group/test_project/base_images)
+DEBUG: semanticCommits: disabled (repository=gitlab-group/test_project/base_images)
+DEBUG: 2 flattened updates found: registry-access-redhat-com.artifactory.company.com/ubi8/nodejs-20, registry-access-redhat-com.artifactory.company.com/ubi8/nodejs-18 (repository=gitlab-group/test_project/base_images)
+DEBUG: Returning 2 branch(es) (repository=gitlab-group/test_project/base_images)
+DEBUG: config.repoIsOnboarded=true (repository=gitlab-group/test_project/base_images)
+DEBUG: packageFiles with updates (repository=gitlab-group/test_project/base_images, baseBranch=main)
+       "config": {
+         "gitlabci": [
+           {
+             "packageFile": ".gitlab-ci.yml",
+             "deps": [
+               {
+                 "skipReason": "invalid-name",
+                 "replaceString": "${DEFAULT_IMAGE}",
+                 "autoReplaceStringTemplate": "{{depName}}{{#if newValue}}:{{newValue}}{{/if}}{{#if newDigest}}@{{newDigest}}{{/if}}",
+                 "datasource": "docker",
+                 "depType": "image",
+                 "updates": []
+               }
+             ]
+           }
+         ],
+         "regex": [
+           {
+             "deps": [
+               {
+                 "depName": "registry-redhat-io.artifactory.company.com/rhel8/redis-6",
+                 "currentValue": "1-146",
+                 "datasource": "docker",
+                 "versioning": "redhat",
+                 "replaceString": "datasource=docker depName=registry-redhat-io.artifactory.company.com/rhel8/redis-6 versioning=redhat\nregistry.redhat.io/rhel8/redis-6:1-146",
+                 "updates": [],
+                 "packageName": "registry-redhat-io.artifactory.company.com/rhel8/redis-6",
+                 "warnings": [],
+                 "registryUrl": "https://registry-redhat-io.artifactory.company.com",
+                 "currentVersion": "1-146",
+                 "fixedVersion": "1-146"
+               },
+               {
+                 "depName": "registry-redhat-io.artifactory.company.com/rhel8/redis-6",
+                 "currentValue": "1-162",
+                 "datasource": "docker",
+                 "versioning": "redhat",
+                 "replaceString": "datasource=docker depName=registry-redhat-io.artifactory.company.com/rhel8/redis-6 versioning=redhat\nregistry.redhat.io/rhel8/redis-6:1-162",
+                 "updates": [],
+                 "packageName": "registry-redhat-io.artifactory.company.com/rhel8/redis-6",
+                 "warnings": [],
+                 "registryUrl": "https://registry-redhat-io.artifactory.company.com",
+                 "currentVersion": "1-162",
+                 "fixedVersion": "1-162"
+               },
+               {
+                 "depName": "registry-redhat-io.artifactory.company.com/rhel8/redis-6",
+                 "currentValue": "1-170",
+                 "datasource": "docker",
+                 "versioning": "redhat",
+                 "replaceString": "datasource=docker depName=registry-redhat-io.artifactory.company.com/rhel8/redis-6 versioning=redhat\nregistry.redhat.io/rhel8/redis-6:1-170",
+                 "updates": [],
+                 "packageName": "registry-redhat-io.artifactory.company.com/rhel8/redis-6",
+                 "warnings": [],
+                 "registryUrl": "https://registry-redhat-io.artifactory.company.com",
+                 "currentVersion": "1-170",
+                 "fixedVersion": "1-170"
+               },
+               {
+                 "depName": "registry-access-redhat-com.artifactory.company.com/ubi8/ubi-minimal",
+                 "currentValue": "8.5-230",
+                 "datasource": "docker",
+                 "versioning": "redhat",
+                 "replaceString": "datasource=docker depName=registry-access-redhat-com.artifactory.company.com/ubi8/ubi-minimal versioning=redhat\nregistry.access.redhat.com/ubi8/ubi-minimal:8.5-230",
+                 "updates": [],
+                 "packageName": "registry-access-redhat-com.artifactory.company.com/ubi8/ubi-minimal",
+                 "warnings": [],
+                 "registryUrl": "https://registry-access-redhat-com.artifactory.company.com",
+                 "currentVersion": "8.5-230",
+                 "fixedVersion": "8.5-230"
+               },
+               {
+                 "depName": "registry-access-redhat-com.artifactory.company.com/ubi8/nodejs-20",
+                 "currentValue": "1-14",
+                 "datasource": "docker",
+                 "versioning": "redhat",
+                 "replaceString": "datasource=docker depName=registry-access-redhat-com.artifactory.company.com/ubi8/nodejs-20 versioning=redhat\nregistry.access.redhat.com/ubi8/nodejs-20:1-14",
+                 "updates": [
+                   {
+                     "bucket": "non-major",
+                     "newVersion": "1-30",
+                     "newValue": "1-30",
+                     "newMajor": 1,
+                     "newMinor": 0,
+                     "updateType": "patch",
+                     "branchName": "renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x"
+                   }
+                 ],
+                 "packageName": "registry-access-redhat-com.artifactory.company.com/ubi8/nodejs-20",
+                 "warnings": [],
+                 "registryUrl": "https://registry-access-redhat-com.artifactory.company.com",
+                 "currentVersion": "1-14",
+                 "isSingleVersion": true,
+                 "fixedVersion": "1-14"
+               },
+               {
+                 "depName": "registry-access-redhat-com.artifactory.company.com/ubi8/nodejs-18",
+                 "currentValue": "1-71",
+                 "datasource": "docker",
+                 "versioning": "redhat",
+                 "replaceString": "datasource=docker depName=registry-access-redhat-com.artifactory.company.com/ubi8/nodejs-18 versioning=redhat\nregistry.access.redhat.com/ubi8/nodejs-18:1-71",
+                 "updates": [
+                   {
+                     "bucket": "non-major",
+                     "newVersion": "1-94",
+                     "newValue": "1-94",
+                     "newMajor": 1,
+                     "newMinor": 0,
+                     "updateType": "patch",
+                     "branchName": "renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x"
+                   }
+                 ],
+                 "packageName": "registry-access-redhat-com.artifactory.company.com/ubi8/nodejs-18",
+                 "warnings": [],
+                 "registryUrl": "https://registry-access-redhat-com.artifactory.company.com",
+                 "currentVersion": "1-71",
+                 "isSingleVersion": true,
+                 "fixedVersion": "1-71"
+               }
+             ],
+             "matchStrings": [
+               "datasource=(?<datasource>\\S+) depName=(?<depName>\\S+)( versioning=(?<versioning>\\S+))?\n.*?-[^:]*:(?<currentValue> ?\\d.*)",
+               "datasource=(?<datasource>\\S+) depName=(?<depName>\\S+)( versioning=(?<versioning>\\S+))?\n.*?[^:]*: \"(?<currentValue>.*)\n?\""
+             ],
+             "datasourceTemplate": "{{#if datasource}}{{{datasource}}}{{else}}docker{{/if}}",
+             "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}",
+             "packageFile": "files/base_images.txt"
+           }
+         ]
+       }
+DEBUG: detectSemanticCommits() (repository=gitlab-group/test_project/base_images)
+DEBUG: semanticCommits: returning "disabled" from cache (repository=gitlab-group/test_project/base_images)
+DEBUG: processRepo() (repository=gitlab-group/test_project/base_images)
+DEBUG: Processing 2 branches: renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x, renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x (repository=gitlab-group/test_project/base_images)
+DEBUG: Calculated maximum PRs remaining this run: 9007199254740991 (repository=gitlab-group/test_project/base_images)
+DEBUG: PullRequests limit = 9007199254740991 (repository=gitlab-group/test_project/base_images)
+DEBUG: Calculated maximum branches remaining this run: 9007199254740991 (repository=gitlab-group/test_project/base_images)
+DEBUG: Branches limit = 9007199254740991 (repository=gitlab-group/test_project/base_images)
+DEBUG: syncBranchState() (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x)
+DEBUG: syncBranchState(): Branch cache not found, creating minimal branchState (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x)
+DEBUG: getBranchPr(renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x) (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x)
+DEBUG: findPr(renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x, undefined, open) (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x)
+DEBUG: getPr(4) (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x)
+DEBUG: getMR(4) (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x)
+DEBUG: branchExists=true (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x)
+DEBUG: dependencyDashboardCheck=undefined (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x)
+DEBUG: PR rebase requested=false (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x)
+DEBUG: Checking if PR has been edited (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x)
+DEBUG: branch.isModified(): using git to calculate (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x)
+DEBUG: branch.isModified() = false (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x)
+DEBUG: Found existing branch PR (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x)
+DEBUG: Checking schedule(at any time, null) (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x)
+DEBUG: No schedule defined (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x)
+DEBUG: Branch already exists (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x)
+DEBUG: Skipping behind base branch check due to rebaseWhen=auto (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x)
+DEBUG: isBranchConflicted(main, renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x) (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x)
+DEBUG: branch.isConflicted(): using git to calculate (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x)
+DEBUG: branch.isConflicted(): false (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x)
+DEBUG: Branch does not need rebasing (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x)
+DEBUG: Using reuseExistingBranch: true (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x)
+DEBUG: Setting current branch to main (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x)
+DEBUG: latest commit (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x)
+       "branchName": "main",
+       "latestCommitDate": "2024-02-29T12:22:21-05:00"
+DEBUG: manager.getUpdatedPackageFiles() reuseExistingBranch=true (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x)
+DEBUG: Rebasing branch after deps list has changed (repository=gitlab-group/test_project/base_images, packageFile=files/base_images.txt, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x)
+       "depName": "registry-access-redhat-com.artifactory.company.com/ubi8/nodejs-18"
+DEBUG: manager.getUpdatedPackageFiles() reuseExistingBranch=false (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x)
+DEBUG: Starting search at index 1027 (repository=gitlab-group/test_project/base_images, packageFile=files/base_images.txt, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x)
+       "depName": "registry-access-redhat-com.artifactory.company.com/ubi8/nodejs-18"
+DEBUG: Found match at index 1027 (repository=gitlab-group/test_project/base_images, packageFile=files/base_images.txt, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x)
+       "depName": "registry-access-redhat-com.artifactory.company.com/ubi8/nodejs-18"
+DEBUG: Contents updated (repository=gitlab-group/test_project/base_images, packageFile=files/base_images.txt, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x)
+       "depName": "registry-access-redhat-com.artifactory.company.com/ubi8/nodejs-18"
+DEBUG: Updated 1 package files (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x)
+DEBUG: No updated lock files in branch (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x)
+DEBUG: 1 file(s) to commit (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x)
+DEBUG: Preparing files for committing to branch renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x)
+DEBUG: git commit (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x)
+       "deletedFiles": [],
+       "ignoredFiles": [],
+       "result": {
+         "author": null,
+         "branch": "renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x",
+         "commit": "e60c05078b261bd3230c4ed3fb650e63305d8c84",
+         "root": false,
+         "summary": {"changes": 1, "insertions": 1, "deletions": 0}
+       }
+DEBUG: Pushing refSpec renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x:renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x)
+DEBUG: git push (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x)
+       "result": {
+         "pushed": [],
+         "ref": {
+           "local": "refs/remotes/origin/renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x"
+         },
+         "remoteMessages": {
+           "all": [
+             "View merge request for renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x:",
+             "https://gitlab.company.com/gitlab-group/test_project/base_images/-/merge_requests/4"
+           ]
+         }
+       }
+DEBUG: Setting current branch to main (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x)
+DEBUG: latest commit (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x)
+       "branchName": "main",
+       "latestCommitDate": "2024-02-29T12:22:21-05:00"
+ INFO: Branch updated (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x)
+       "commitSha": "e60c05078b261bd3230c4ed3fb650e63305d8c84"
+DEBUG: Ensuring PR (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x)
+DEBUG: There are 0 errors and 0 warnings (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x)
+DEBUG: getBranchPr(renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x) (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x)
+DEBUG: findPr(renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x, undefined, open) (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x)
+DEBUG: getPr(4) (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x)
+DEBUG: getMR(4) (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x)
+DEBUG: getPrCache() (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x)
+DEBUG: Found existing PR (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x)
+DEBUG: Processing existing PR (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x)
+DEBUG: setPrCache() (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x)
+DEBUG: Pull Request #4 does not need updating (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x)
+DEBUG: PR is not configured for automerge (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x)
+DEBUG: setBranchCommit() (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x)
+DEBUG: syncBranchState() (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x)
+DEBUG: syncBranchState(): Branch cache not found, creating minimal branchState (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x)
+DEBUG: getBranchPr(renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x) (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x)
+DEBUG: findPr(renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x, undefined, open) (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x)
+DEBUG: getPr(3) (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x)
+DEBUG: getMR(3) (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x)
+DEBUG: branchExists=true (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x)
+DEBUG: dependencyDashboardCheck=undefined (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x)
+DEBUG: PR rebase requested=false (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x)
+DEBUG: Checking if PR has been edited (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x)
+DEBUG: branch.isModified(): using git to calculate (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x)
+DEBUG: branch.isModified() = false (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x)
+DEBUG: Found existing branch PR (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x)
+DEBUG: Checking schedule(at any time, null) (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x)
+DEBUG: No schedule defined (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x)
+DEBUG: Branch already exists (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x)
+DEBUG: Skipping behind base branch check due to rebaseWhen=auto (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x)
+DEBUG: isBranchConflicted(main, renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x) (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x)
+DEBUG: branch.isConflicted(): using git to calculate (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x)
+DEBUG: branch.isConflicted(): false (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x)
+DEBUG: Branch does not need rebasing (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x)
+DEBUG: Using reuseExistingBranch: true (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x)
+DEBUG: Setting current branch to main (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x)
+DEBUG: latest commit (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x)
+       "branchName": "main",
+       "latestCommitDate": "2024-02-29T12:22:21-05:00"
+DEBUG: manager.getUpdatedPackageFiles() reuseExistingBranch=true (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x)
+DEBUG: Rebasing branch after deps list has changed (repository=gitlab-group/test_project/base_images, packageFile=files/base_images.txt, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x)
+       "depName": "registry-access-redhat-com.artifactory.company.com/ubi8/nodejs-20"
+DEBUG: manager.getUpdatedPackageFiles() reuseExistingBranch=false (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x)
+DEBUG: Starting search at index 859 (repository=gitlab-group/test_project/base_images, packageFile=files/base_images.txt, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x)
+       "depName": "registry-access-redhat-com.artifactory.company.com/ubi8/nodejs-20"
+DEBUG: Found match at index 859 (repository=gitlab-group/test_project/base_images, packageFile=files/base_images.txt, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x)
+       "depName": "registry-access-redhat-com.artifactory.company.com/ubi8/nodejs-20"
+DEBUG: Contents updated (repository=gitlab-group/test_project/base_images, packageFile=files/base_images.txt, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x)
+       "depName": "registry-access-redhat-com.artifactory.company.com/ubi8/nodejs-20"
+DEBUG: Updated 1 package files (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x)
+DEBUG: No updated lock files in branch (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x)
+DEBUG: 1 file(s) to commit (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x)
+DEBUG: Preparing files for committing to branch renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x)
+DEBUG: git commit (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x)
+       "deletedFiles": [],
+       "ignoredFiles": [],
+       "result": {
+         "author": null,
+         "branch": "renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x",
+         "commit": "12776f2081cc1b9ea184f53c40ce00be94869cc7",
+         "root": false,
+         "summary": {"changes": 1, "insertions": 1, "deletions": 1}
+       }
+DEBUG: Pushing refSpec renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x:renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x)
+DEBUG: git push (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x)
+       "result": {
+         "pushed": [],
+         "ref": {
+           "local": "refs/remotes/origin/renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x"
+         },
+         "remoteMessages": {
+           "all": [
+             "View merge request for renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x:",
+             "https://gitlab.company.com/gitlab-group/test_project/base_images/-/merge_requests/3"
+           ]
+         }
+       }
+DEBUG: Setting current branch to main (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x)
+DEBUG: latest commit (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x)
+       "branchName": "main",
+       "latestCommitDate": "2024-02-29T12:22:21-05:00"
+ INFO: Branch updated (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x)
+       "commitSha": "12776f2081cc1b9ea184f53c40ce00be94869cc7"
+DEBUG: Ensuring PR (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x)
+DEBUG: There are 0 errors and 0 warnings (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x)
+DEBUG: getBranchPr(renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x) (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x)
+DEBUG: findPr(renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x, undefined, open) (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x)
+DEBUG: getPr(3) (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x)
+DEBUG: getMR(3) (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x)
+DEBUG: getPrCache() (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x)
+DEBUG: Found existing PR (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x)
+DEBUG: Processing existing PR (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x)
+DEBUG: setPrCache() (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x)
+DEBUG: Pull Request #3 does not need updating (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x)
+DEBUG: PR is not configured for automerge (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x)
+DEBUG: setBranchCommit() (repository=gitlab-group/test_project/base_images, branch=renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x)
+DEBUG: getPr(2) (repository=gitlab-group/test_project/base_images)
+DEBUG: getMR(2) (repository=gitlab-group/test_project/base_images)
+DEBUG: getPrCache() (repository=gitlab-group/test_project/base_images)
+DEBUG: getBranchPr(renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x) (repository=gitlab-group/test_project/base_images)
+DEBUG: findPr(renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x, undefined, open) (repository=gitlab-group/test_project/base_images)
+DEBUG: getPr(4) (repository=gitlab-group/test_project/base_images)
+DEBUG: getMR(4) (repository=gitlab-group/test_project/base_images)
+DEBUG: getPrCache() (repository=gitlab-group/test_project/base_images)
+DEBUG: getBranchPr(renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x) (repository=gitlab-group/test_project/base_images)
+DEBUG: findPr(renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x, undefined, open) (repository=gitlab-group/test_project/base_images)
+DEBUG: getPr(3) (repository=gitlab-group/test_project/base_images)
+DEBUG: getMR(3) (repository=gitlab-group/test_project/base_images)
+DEBUG: getPrCache() (repository=gitlab-group/test_project/base_images)
+DEBUG: ensureDependencyDashboard() (repository=gitlab-group/test_project/base_images)
+DEBUG: Closing Dependency Dashboard (repository=gitlab-group/test_project/base_images)
+DEBUG: ensureIssueClosing() (repository=gitlab-group/test_project/base_images)
+DEBUG: validateReconfigureBranch() (repository=gitlab-group/test_project/base_images)
+DEBUG: No reconfigure branch found (repository=gitlab-group/test_project/base_images)
+DEBUG: Removing any stale branches (repository=gitlab-group/test_project/base_images)
+DEBUG: config.repoIsOnboarded=true (repository=gitlab-group/test_project/base_images)
+DEBUG: Branch lists (repository=gitlab-group/test_project/base_images)
+       "branchList": [
+         "renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x",
+         "renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x"
+       ],
+       "renovateBranches": [
+         "renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x",
+         "renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x"
+       ]
+DEBUG: remainingBranches= (repository=gitlab-group/test_project/base_images)
+DEBUG: No branches to clean up (repository=gitlab-group/test_project/base_images)
+DEBUG: ensureIssueClosing() (repository=gitlab-group/test_project/base_images)
+DEBUG: ensureIssueClosing() (repository=gitlab-group/test_project/base_images)
+DEBUG: PackageFiles.clear() - Package files deleted (repository=gitlab-group/test_project/base_images)
+DEBUG: Branch summary (repository=gitlab-group/test_project/base_images)
+       "cacheModified": undefined,
+       "baseBranches": [{"branchName": "main", "sha": "e9533ff4afc349dfb7e475a95f0a2af359d3bd6d"}],
+       "branches": [
+         {
+           "automerge": false,
+           "baseBranch": "main",
+           "baseBranchSha": "e9533ff4afc349dfb7e475a95f0a2af359d3bd6d",
+           "branchName": "renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x",
+           "branchSha": "e60c05078b261bd3230c4ed3fb650e63305d8c84",
+           "isModified": false,
+           "isPristine": true
+         },
+         {
+           "automerge": false,
+           "baseBranch": "main",
+           "baseBranchSha": "e9533ff4afc349dfb7e475a95f0a2af359d3bd6d",
+           "branchName": "renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x",
+           "branchSha": "12776f2081cc1b9ea184f53c40ce00be94869cc7",
+           "isModified": false,
+           "isPristine": true
+         }
+       ],
+       "defaultBranch": "main",
+       "inactiveBranches": []
+DEBUG: branches info extended (repository=gitlab-group/test_project/base_images)
+       "branchesInformation": [
+         {
+           "branchName": "renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-18-1.x",
+           "prNo": 4,
+           "prTitle": "Update registry-access-redhat-com.artifactory.company.com/ubi8/nodejs-18 Docker tag to v1-94",
+           "result": "done",
+           "upgrades": [
+             {
+               "datasource": "docker",
+               "depName": "registry-access-redhat-com.artifactory.company.com/ubi8/nodejs-18",
+               "displayPending": "",
+               "fixedVersion": "1-71",
+               "currentVersion": "1-71",
+               "currentValue": "1-71",
+               "newValue": "1-94",
+               "newVersion": "1-94",
+               "packageFile": "files/base_images.txt",
+               "updateType": "patch",
+               "packageName": "registry-access-redhat-com.artifactory.company.com/ubi8/nodejs-18"
+             }
+           ]
+         },
+         {
+           "branchName": "renovate/registry-access-redhat-com.artifactory.company.com-ubi8-nodejs-20-1.x",
+           "prNo": 3,
+           "prTitle": "Update registry-access-redhat-com.artifactory.company.com/ubi8/nodejs-20 Docker tag to v1-30",
+           "result": "done",
+           "upgrades": [
+             {
+               "datasource": "docker",
+               "depName": "registry-access-redhat-com.artifactory.company.com/ubi8/nodejs-20",
+               "displayPending": "",
+               "fixedVersion": "1-14",
+               "currentVersion": "1-14",
+               "currentValue": "1-14",
+               "newValue": "1-30",
+               "newVersion": "1-30",
+               "packageFile": "files/base_images.txt",
+               "updateType": "patch",
+               "packageName": "registry-access-redhat-com.artifactory.company.com/ubi8/nodejs-20"
+             }
+           ]
+         }
+       ]
+DEBUG: Renovate repository PR statistics (repository=gitlab-group/test_project/base_images)
+       "stats": {"total": 2, "open": 3, "closed": 0, "merged": 0}
+DEBUG: Repository result: done, status: onboarded, enabled: true, onboarded: true (repository=gitlab-group/test_project/base_images)
+DEBUG: repository problems (repository=gitlab-group/test_project/base_images)
+       "repoProblems": [
+         "WARN: No github.com token has been configured. Skipping release notes retrieval"
+       ]
+DEBUG: Repository timing splits (milliseconds) (repository=gitlab-group/test_project/base_images)
+       "splits": {
+         "init": 3703,
+         "extract": 230,
+         "lookup": 68526,
+         "onboarding": 1,
+         "update": 12266
+       },
+       "total": 84753
+DEBUG: Package cache statistics (repository=gitlab-group/test_project/base_images)
+       "get": {"count": 15, "totalMs": 22, "avgMs": 1, "medianMs": 1, "maxMs": 7},
+       "set": {"count": 15, "totalMs": 435, "avgMs": 29, "medianMs": 6, "maxMs": 354}
+DEBUG: http statistics (repository=gitlab-group/test_project/base_images)
+       "urls": {
+         "https://artifactory.company.com/artifactory/api/docker/registry-access-redhat-com/v2/token (GET,200)": 3,
+         "https://artifactory.company.com/artifactory/api/docker/registry-redhat-io/v2/token (GET,200)": 1,
+         "https://gitlab.company.com/api/v4/projects/gitlab-group%2Ftest_project%2Fbase_images/issues (GET,200)": 1,
+         "https://gitlab.company.com/api/v4/projects/gitlab-group%2Ftest_project%2Fbase_images/merge_requests (GET,200)": 1,
+         "https://gitlab.company.com/api/v4/projects/gitlab-group%2Ftest_project%2Fbase_images/merge_requests/2 (GET,200)": 1,
+         "https://gitlab.company.com/api/v4/projects/gitlab-group%2Ftest_project%2Fbase_images/merge_requests/3 (GET,200)": 1,
+         "https://gitlab.company.com/api/v4/projects/gitlab-group%2Ftest_project%2Fbase_images/merge_requests/4 (GET,200)": 1,
+         "https://gitlab.company.com/api/v4/projects/gitlab-group%2Frenovate%2Frenovate-bot (GET,200)": 1,
+         "https://gitlab.company.com/api/v4/projects/gitlab-group%2Frenovate%2Frenovate-bot/repository/files/default.json/raw (GET,200)": 1,
+         "https://registry-access-redhat-com.artifactory.company.com/v2/ (GET,401)": 1,
+         "https://registry-access-redhat-com.artifactory.company.com/v2/ubi8/nodejs-18/blobs/sha256:b66d2930cc206e78866515c328d59c10b5f78b660f0cc8c06cff3f83109ca9e7 (GET,200)": 1,
+         "https://registry-access-redhat-com.artifactory.company.com/v2/ubi8/nodejs-18/manifests/latest (GET,200)": 1,
+         "https://registry-access-redhat-com.artifactory.company.com/v2/ubi8/nodejs-18/manifests/sha256:51cabe64da7ecfe05e47a8f312c756848dc6250c40df3710605d540c350ed48d (GET,200)": 1,
+         "https://registry-access-redhat-com.artifactory.company.com/v2/ubi8/nodejs-18/tags/list (GET,200)": 100,
+         "https://registry-access-redhat-com.artifactory.company.com/v2/ubi8/nodejs-18/tags/list (GET,401)": 1,
+         "https://registry-access-redhat-com.artifactory.company.com/v2/ubi8/nodejs-20/blobs/sha256:52dc401ea31b36c43787c94c1ef0fa40ca8948b892f8fa92ea5edbabc19c8edd (GET,200)": 1,
+         "https://registry-access-redhat-com.artifactory.company.com/v2/ubi8/nodejs-20/manifests/latest (GET,200)": 1,
+         "https://registry-access-redhat-com.artifactory.company.com/v2/ubi8/nodejs-20/manifests/sha256:c64033f97e838574627dc3bc974ae94d21445281f94be68348762f543629e3b5 (GET,200)": 1,
+         "https://registry-access-redhat-com.artifactory.company.com/v2/ubi8/nodejs-20/tags/list (GET,200)": 1,
+         "https://registry-access-redhat-com.artifactory.company.com/v2/ubi8/nodejs-20/tags/list (GET,401)": 1,
+         "https://registry-access-redhat-com.artifactory.company.com/v2/ubi8/ubi-minimal/blobs/sha256:08c1631d50a33042e62175763e9c2f65a2913f86dcbd83c6509283a778ff2662 (GET,200)": 1,
+         "https://registry-access-redhat-com.artifactory.company.com/v2/ubi8/ubi-minimal/manifests/8.6-751 (GET,200)": 1,
+         "https://registry-access-redhat-com.artifactory.company.com/v2/ubi8/ubi-minimal/manifests/sha256:9a81cce19ae2a962269d4a7fecd38aec60b852118ad798a265c3f6c4be0df610 (GET,200)": 1,
+         "https://registry-access-redhat-com.artifactory.company.com/v2/ubi8/ubi-minimal/tags/list (GET,200)": 100,
+         "https://registry-access-redhat-com.artifactory.company.com/v2/ubi8/ubi-minimal/tags/list (GET,401)": 1,
+         "https://registry-redhat-io.artifactory.company.com/v2/ (GET,401)": 1,
+         "https://registry-redhat-io.artifactory.company.com/v2/rhel8/redis-6/blobs/sha256:ca13634adcf23f8f9b7303fdbac74b65820618ab3cd75611f12d4d7b76fd138e (GET,200)": 1,
+         "https://registry-redhat-io.artifactory.company.com/v2/rhel8/redis-6/manifests/1-10 (GET,200)": 1,
+         "https://registry-redhat-io.artifactory.company.com/v2/rhel8/redis-6/manifests/sha256:9b59a32c1a606d920e1bd7baa76558841cd9875d40af01b45a3fff0f9348f23f (GET,200)": 1,
+         "https://registry-redhat-io.artifactory.company.com/v2/rhel8/redis-6/tags/list (GET,200)": 100,
+         "https://registry-redhat-io.artifactory.company.com/v2/rhel8/redis-6/tags/list (GET,401)": 1
+       },
+       "hostStats": {
+         "artifactory.company.com": {
+           "requestCount": 5,
+           "requestAvgMs": 108,
+           "queueAvgMs": 0
+         },
+         "gitlab.company.com": {
+           "requestCount": 7,
+           "requestAvgMs": 303,
+           "queueAvgMs": 0
+         },
+         "registry-access-redhat-com.artifactory.company.com": {
+           "requestCount": 214,
+           "requestAvgMs": 458,
+           "queueAvgMs": 0
+         },
+         "registry-redhat-io.artifactory.company.com": {
+           "requestCount": 105,
+           "requestAvgMs": 635,
+           "queueAvgMs": 0
+         }
+       },
+       "totalRequests": 337
+DEBUG: Package lookup durations (repository=gitlab-group/test_project/base_images)
+       "docker": {"count": 7, "averageMs": 44399, "totalMs": 310795, "maximumMs": 68435}
+DEBUG: dns cache (repository=gitlab-group/test_project/base_images)
+       "hosts": []
+ INFO: Repository finished (repository=gitlab-group/test_project/base_images)
+       "cloned": true,
+       "durationMs": 84753
+DEBUG: Checking file package cache for expired items
+DEBUG: Deleted 0 of 15 file cached entries in 27ms
+DEBUG: Renovate exiting

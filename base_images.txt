@@ -1,0 +1,15 @@
+# image list with external registry urls
+# renovate: datasource=docker depName=registry-redhat-io.artifactory.company.com/rhel8/redis-6 versioning=redhat
+registry.redhat.io/rhel8/redis-6:1-146
+# renovate: datasource=docker depName=registry-redhat-io.artifactory.company.com/rhel8/redis-6 versioning=redhat
+registry.redhat.io/rhel8/redis-6:1-162
+# renovate: datasource=docker depName=registry-redhat-io.artifactory.company.com/rhel8/redis-6 versioning=redhat
+registry.redhat.io/rhel8/redis-6:1-170
+# renovate: datasource=docker depName=registry-access-redhat-com.artifactory.company.com/ubi8/ubi-minimal versioning=redhat
+registry.access.redhat.com/ubi8/ubi-minimal:8.5-230
+# renovate: datasource=docker depName=icr-io.artifactory.company.com/appcafe/websphere-liberty versioning=docker
+icr.io/appcafe/websphere-liberty:24.0.0.1-full-java8-ibmjava-ubi
+# renovate: datasource=docker depName=registry-access-redhat-com.artifactory.company.com/ubi8/nodejs-20 versioning=redhat
+registry.access.redhat.com/ubi8/nodejs-20:1-14
+# renovate: datasource=docker depName=registry-access-redhat-com.artifactory.company.com/ubi8/nodejs-18 versioning=redhat
+registry.access.redhat.com/ubi8/nodejs-18:1-71
